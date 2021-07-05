@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bài tập 29-1: Responsive</title>
+	<style>
+		*{padding: 0;margin: 0;box-sizing: border-box;font-family: arial;color: black;font-size: 15px;}
+		nav, #content{width: 100%;}
+		ul li{width: 100%;background: lightgray;height: 40px;line-height: 40px;text-align: center;list-style: none;}
+		a{text-decoration: none;}
+		li:hover{background: green;}
+		li:hover a{color: white;}
+		#content{width: 100%;padding: 10px;text-align: justify;}
+		@media only screen and (min-width: 400px){
+			
+			nav ul{width: 100%; height: 40px;background: lightgray;}
+			ul li{float: left;}
+		}
+		@media only screen and (min-width: 900px){
+			nav{width: 25%;float: left;background: lightgray;min-height: 200px;}
+			nav li{width: 100%;}
+			#content{width: 75%;float: left;height: 200px;padding-top: 20px;}
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<nav>
+			<ul>
+				<li><a href="">Home<a></li>
+				<li><a href="">News</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="">About</a></li>
+			</ul>
+		</nav>
+		<div id="content">
+			<h2>Responsive Sidenav Example</h2>
+			<p>This example use media queries to transofrm the sidenac to a top nvigation bar when the screen size is 900px or less.</p>
+			<p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+			<p>You will learn more about media queries and respinsive web design later in our CSS Tutorial.</p>
+			<h3>Resize the browser window to see the effect.</h3>
+		</div>
+	</div>
+</body>
+</html>
